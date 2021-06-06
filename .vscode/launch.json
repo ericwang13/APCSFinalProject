@@ -8,14 +8,16 @@
       "type": "java",
       "name": "Launch Current File",
       "request": "launch",
-      "mainClass": "${file}"
+      "mainClass": "${file}",
+      // "vmArgs": "-Djava.library.path=./dll/opencv_java452.dll"
     },
     {
       "type": "java",
       "name": "Launch App",
       "request": "launch",
       "mainClass": "App",
-      "projectName": "APCSFinalProject_8adbdfe7"
+      "projectName": "APCSFinalProject_8adbdfe7",
+      // "vmArgs": "-Djava.library.path=./dll/opencv_java452.dll"
     }
   ]
 }
