@@ -3,6 +3,10 @@
 **Prototype Link**
 https://docs.google.com/document/d/1XL-Z_4QGvfV4LoHfya_3lUnh3ud2iYfJE0QIXefAPtg/edit?usp=sharing
 
+**Compile/Run Instruction**
+TODO
+Still not sure how to get this to run on other people's computers because I am using mostly absolute paths to reference local libraries and SDKs, local images, and the HAAR cascade classifiers. As far as I know using relative paths breaks the program, so I still need to look into this.
+
 **Development Log**
 
 1. Initialized IntelliJ JavaFX Project. Mostly boilerplate code so far, excluding some small formatting changes and FXML update via SceneBuilder
