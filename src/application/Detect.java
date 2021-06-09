@@ -19,4 +19,19 @@ public class Detect {
     }
     return frame;
   }
+
+  public static Mat blurFace(Mat frame, int size) {
+    MatOfRect facesDetected = new MatOfRect();
+    CascadeClassifier cascadeClassifier = new CascadeClassifier();
+    int minFaceSize = Math.round(frame.rows() * 0.1f);
+    cascadeClassifier.load("C:/Users/Eric Wang/IdeaProjects/ImageProcessing/res/haar/haarcascade_frontalface_alt.xml");
+    cascadeClassifier.detectMultiScale(frame, facesDetected, 1.1, 3, Objdetect.CASCADE_SCALE_IMAGE,
+        new Size(minFaceSize, minFaceSize), new Size());
+    Rect[] facesArray = facesDetected.toArray();
+    for (Rect face : facesArray) {
+      Mat mask = frame.submat(new Rect(face.tl(), face.br()));
+      Imgproc.blur(mask, mask, new Size(size, size), new Point(-1, -1));
+    }
+    return frame;
+  }
 }

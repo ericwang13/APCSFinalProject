@@ -17,3 +17,5 @@ https://docs.google.com/document/d/1XL-Z_4QGvfV4LoHfya_3lUnh3ud2iYfJE0QIXefAPtg/
 
 6. Implemented haar cascade classifier into Detect.java. This creates a box around faces that are detected in the video stream (AKA face detection, although it is fairly limited in terms of accuracy, angles, etc).
 Should be noted that I did not personally train any of the classifiers with machine learning, these are pre sets from OpenCV.
+
+7. Implemented face blurring. Uses the same cascade classifier as face detection, but instead of drawing a rectangle around the face it blurs the rectangle over the face
