@@ -12,3 +12,5 @@ https://docs.google.com/document/d/1XL-Z_4QGvfV4LoHfya_3lUnh3ud2iYfJE0QIXefAPtg/
 3. Prepared for more image processing functions with auxiliary/utility methods. Methods include turning a OpenCV matrix into a JavaFX image.
 
 4. Downloaded pre trained Haar classifiers from OpenCV docs for facial recognition uses.
+
+5. Set up Main function to create JavaFX scene with image view in the top. Set up with simple function that will display live video feed from default camera without any processing or filtering.
