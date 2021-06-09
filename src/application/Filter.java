@@ -25,4 +25,20 @@ public class Filter {
     Imgproc.blur(frame, frame, new Size(size, size), new Point(-1, -1));
     return frame;
   }
+
+  public static Mat staticTV(Mat frame) {
+    return null;
+  }
+
+  public static Mat duoTone(Mat frame) {
+    return null;
+  }
+
+  public static Mat emboss(Mat frame) {
+    return null;
+  }
+
+  public static Mat contours(Mat frame) {
+    return null;
+  }
 }
