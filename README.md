@@ -14,3 +14,6 @@ https://docs.google.com/document/d/1XL-Z_4QGvfV4LoHfya_3lUnh3ud2iYfJE0QIXefAPtg/
 4. Downloaded pre trained Haar classifiers from OpenCV docs for facial recognition uses.
 
 5. Set up Main function to create JavaFX scene with image view in the top. Set up with simple function that will display live video feed from default camera without any processing or filtering.
+
+6. Implemented haar cascade classifier into Detect.java. This creates a box around faces that are detected in the video stream (AKA face detection, although it is fairly limited in terms of accuracy, angles, etc).
+Should be noted that I did not personally train any of the classifiers with machine learning, these are pre sets from OpenCV.
