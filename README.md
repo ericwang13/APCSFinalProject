@@ -19,3 +19,5 @@ https://docs.google.com/document/d/1XL-Z_4QGvfV4LoHfya_3lUnh3ud2iYfJE0QIXefAPtg/
 Should be noted that I did not personally train any of the classifiers with machine learning, these are pre sets from OpenCV.
 
 7. Implemented face blurring. Uses the same cascade classifier as face detection, but instead of drawing a rectangle around the face it blurs the rectangle over the face
+
+8. Started working on various filters. I have some plans for the following filters: greyscale, box blur, gaussian blur, sepia, emboss, contours, duo tone, static, and tiling. I started with a super simple greyscale filter.

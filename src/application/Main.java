@@ -50,6 +50,12 @@ public class Main extends Application {
     return Util.matToImg(haarClassifiedImg);
   }
 
+  public Image getGreyscale() {
+    Mat mat = new Mat();
+    capture.read(mat);
+    return Util.matToImg(Filter.greyscale(mat));
+  }
+
   public static void main(String[] args) {
     System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     launch(args);
