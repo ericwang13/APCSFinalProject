@@ -56,6 +56,18 @@ public class Main extends Application {
     return Util.matToImg(Filter.greyscale(mat));
   }
 
+  public Image getSepia() {
+    Mat mat = new Mat();
+    capture.read(mat);
+    return Util.matToImg(Filter.sepia(mat));
+  }
+
+  public Image getBlur(int size) {
+    Mat mat = new Mat();
+    capture.read(mat);
+    return Util.matToImg(Filter.blur(mat, size));
+  }
+
   public static void main(String[] args) {
     System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     launch(args);

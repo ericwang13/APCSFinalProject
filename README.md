@@ -21,3 +21,5 @@ Should be noted that I did not personally train any of the classifiers with mach
 7. Implemented face blurring. Uses the same cascade classifier as face detection, but instead of drawing a rectangle around the face it blurs the rectangle over the face
 
 8. Started working on various filters. I have some plans for the following filters: greyscale, box blur, gaussian blur, sepia, emboss, contours, duo tone, static, and tiling. I started with a super simple greyscale filter.
+
+9. Completed sepia and box blur filters, made some plans for more filters and some JavaFX designs.
