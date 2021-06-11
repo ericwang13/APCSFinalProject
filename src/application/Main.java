@@ -16,7 +16,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("application.fxml"));
         BorderPane root = (BorderPane) loader.load();
         primaryStage.setTitle("Image Processing");
-        primaryStage.setScene(new Scene(root, 1200, 1000));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
 
         Controller controller = loader.getController();
