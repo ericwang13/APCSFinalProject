@@ -39,7 +39,7 @@ public class Util {
     }
 
     public static String getClassifierPath() {
-        File f = new File("res/haar/haarcascade_frontalface_alt.xml");
+        File f = new File("src/application/haarcascade_frontalface_alt.xml");
         return f.getAbsolutePath();
     }
 

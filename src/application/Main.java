@@ -11,6 +11,8 @@ import org.opencv.core.*;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
+//        System.out.println(Util.getClassifierPath());
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("application.fxml"));
         BorderPane root = (BorderPane) loader.load();
         primaryStage.setTitle("Image Processing");
