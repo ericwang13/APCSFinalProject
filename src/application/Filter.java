@@ -27,7 +27,14 @@ public class Filter {
     }
 
     public static Mat noise(Mat frame) {
-        return null;
+        Mat noise = new Mat(frame.rows(), frame.cols(), frame.type());
+        MatOfDouble mean = new MatOfDouble();
+        MatOfDouble deviation = new MatOfDouble();
+        Core.meanStdDev(frame, mean, deviation);
+        Core.randn(noise, mean.get(0,0)[0], deviation.get(0,0)[0]);
+        Core.add(frame, noise, frame);
+
+        return frame;
     }
 
     public static Mat recolor(Mat frame) {
@@ -42,12 +49,6 @@ public class Filter {
         Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
         Imgproc.GaussianBlur(frame, frame, new Size(3, 3), 0);
         Imgproc.Canny(frame, frame, 100, 200, 3, false);
-
-        return frame;
-    }
-
-    public static Mat colormap(Mat frame, int map) {
-        Imgproc.applyColorMap(frame, frame, map);
 
         return frame;
     }

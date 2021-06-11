@@ -51,6 +51,7 @@ public class Util {
             case 4 -> Filter.greyscale(frame);
             case 5 -> Filter.sepia(frame);
             case 6 -> Filter.blur(frame, 100);
+            case 7 -> Filter.noise(frame);
             default -> frame;
         };
     }
