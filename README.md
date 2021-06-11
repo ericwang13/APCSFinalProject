@@ -30,4 +30,10 @@ Should be noted that I did not personally train any of the classifiers with mach
 
 10. Worked on JavaFX frontend. Created a input field and submit button to change which filter/effect you want to use on the fly. Invalid numbers default to the capture stream without any effects. Pretty ugly, but functional.
 
-11. Improved JavaFX related stuff. Frontend difference is minimal, but on the backend code is much more organized. I reworked the JavaFX stuff to all be in the Controller class which is linked with the application.fxml file.
+11. Fixed the bug that would occur if anything was inputed besides an integer into the filter field
+
+12. Improved JavaFX related stuff. Frontend difference is minimal, but on the backend code is much more organized. I reworked the JavaFX stuff to all be in the Controller class which is linked with the application.fxml file.
+
+13. Added a new effect, the noise effect. This filter basically just makes the stream look bad, oversaturated and grainy/noisy
+
+14. Added a blur slider that only appears when one of the slider effects are selected (blur face or box blur). For everything else it will hide.

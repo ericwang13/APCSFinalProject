@@ -37,14 +37,6 @@ public class Filter {
         return frame;
     }
 
-    public static Mat recolor(Mat frame) {
-        return null;
-    }
-
-    public static Mat emboss(Mat frame) {
-        return null;
-    }
-
     public static Mat edge(Mat frame) {
         Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
         Imgproc.GaussianBlur(frame, frame, new Size(3, 3), 0);
