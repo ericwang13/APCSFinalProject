@@ -2,6 +2,8 @@ package application;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -14,36 +16,47 @@ import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
 
+import java.util.Objects;
+
 public class Main extends Application {
     private VideoCapture capture;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        capture = new VideoCapture(0);
-
-        BorderPane pane = new BorderPane();
-        ImageView view = new ImageView();
-        TextField field = new TextField();
-        Button submit = new Button();
-        submit.setText("Click here to update process");
-        submit.setMaxWidth(Double.MAX_VALUE);
-
-        pane.setCenter(view);
-        pane.setTop(field);
-        pane.setBottom(submit);
-
-        Scene scene = new Scene(pane, 1000, 800);
-        primaryStage.setTitle("OpenCV Java Image Processing");
-        primaryStage.setScene(scene);
+//        capture = new VideoCapture(0);
+//
+//        BorderPane pane = new BorderPane();
+//        ImageView view = new ImageView();
+//        TextField field = new TextField();
+//        Button submit = new Button();
+//        submit.setText("Click here to update process");
+//        submit.setMaxWidth(Double.MAX_VALUE);
+//
+//        pane.setCenter(view);
+//        pane.setTop(field);
+//        pane.setBottom(submit);
+//
+//        Scene scene = new Scene(pane, 1000, 800);
+//        primaryStage.setTitle("OpenCV Java Image Processing");
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
+//
+//        final int[] i = {0};
+//        new AnimationTimer() {
+//            @Override public void handle(long l) {
+//                view.setImage(chooseEffect(i[0]));
+//                submit.setOnAction(actionEvent -> i[0] = Integer.parseInt(field.getText()));
+//            }
+//        }.start();
+//        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("application.fxml")));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("application.fxml"));
+        BorderPane root = (BorderPane) loader.load();
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 1200, 1000));
         primaryStage.show();
 
-        final int[] i = {0};
-        new AnimationTimer() {
-            @Override public void handle(long l) {
-                view.setImage(chooseEffect(i[0]));
-                submit.setOnAction(actionEvent -> i[0] = Integer.parseInt(field.getText()));
-            }
-        }.start();
+        Controller controller = loader.getController();
+        controller.updateView();
     }
 
     public Image chooseEffect(int i) {
