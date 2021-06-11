@@ -3,9 +3,50 @@
 **Prototype Link**
 https://docs.google.com/document/d/1XL-Z_4QGvfV4LoHfya_3lUnh3ud2iYfJE0QIXefAPtg/edit?usp=sharing
 
-**Compile/Run Instruction**
-TODO
-Still not sure how to get this to run on other people's computers because I am using mostly absolute paths to reference local libraries and SDKs, local images, and the HAAR cascade classifiers. As far as I know using relative paths breaks the program, so I still need to look into this.
+---
+
+**Run Instructions**
+1. Start by cloning the repository with
+```
+git clone https://github.com/ericwang13/APCSFinalProject.git
+```
+2. cd into the repository where you should a file called "ImageProcessing.jar" among other source files and build files
+
+3. From here all you have to do is run the jar file. In order to do so you use java -jar [name-of-file.jar] except you also must add the opencv dynamic-link library file with the -Djava.library.path JVM argument.
+
+The format for how to run the executable is as follows
+```
+java -Djava.library.path="[path-to-repository]/APCSFinalProject/lib/opencv" -jar ImageProcessing.jar
+```
+
+For example, on my machine it would be
+```
+java -Djava.library.path="/C/Users/Eric Wang/Desktop/APCSFinalProject/lib/opencv" -jar ImageProcessing.jar
+```
+Because I cloned the repository to my Desktop
+
+---
+
+**How To Use**
+
+The application is pretty easy to use, there is only a text field and a update button. You enter the filter you wish to apply into the text field, and in order to apply you either click the return key while in the text field or click the button.
+
+The filters are as follows:
+
+|Number|Filter|
+|---|---|
+|1|Detect Face|
+|2|Blur Face|
+|3|Detect Edges|
+|4|Greyscale|
+|5|Sepia|
+|6|Blur|
+|7|Noise|
+|Anything Other Number|No Filter|
+
+Simply enter the number corresponding with the filter you want to apply
+
+---
 
 **Development Log**
 
@@ -37,3 +78,5 @@ Should be noted that I did not personally train any of the classifiers with mach
 13. Added a new effect, the noise effect. This filter basically just makes the stream look bad, oversaturated and grainy/noisy
 
 14. Added a blur slider that only appears when one of the slider effects are selected (blur face or box blur). For everything else it will hide.
+
+15. Compiled everything into one packaged jar executable that can be easily run
