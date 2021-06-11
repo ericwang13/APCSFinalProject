@@ -25,6 +25,7 @@ java -Djava.library.path="/C/Users/Eric Wang/Desktop/APCSFinalProject/lib/opencv
 ```
 Because I cloned the repository to my Desktop
 
+4. You need to have an actual webcam connected to your device. I'm not sure how the application will function if you have multiple cameras attached, and I believe it will not work with something like OBS Virtual Camera
 ---
 
 **How To Use**
