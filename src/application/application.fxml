@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -13,8 +14,13 @@
       <ImageView fx:id="view" fitHeight="259.0" fitWidth="549.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
-      <VBox prefHeight="32.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <TextField fx:id="field" promptText="Enter Effect Number (See README)" style="-fx-background-color: f7f7f7;">
+      <VBox maxWidth="500.0" prefHeight="32.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <Slider fx:id="slider" min="10.0" visible="false">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Slider>
+         <TextField fx:id="field" onAction="#updateEffect" promptText="Enter Effect Number (See README)" style="-fx-background-color: f7f7f7;">
             <VBox.margin>
                <Insets bottom="10.0" />
             </VBox.margin></TextField>
@@ -26,7 +32,7 @@
                <Font name="Segoe UI" size="12.0" />
             </font></Button>
          <BorderPane.margin>
-            <Insets bottom="20.0" left="200.0" right="200.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" />
          </BorderPane.margin>
       </VBox>
    </bottom>

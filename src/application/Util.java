@@ -43,14 +43,14 @@ public class Util {
         return f.getAbsolutePath();
     }
 
-    public static Mat chooseFilter(Mat frame, int filter) {
+    public static Mat chooseFilter(Mat frame, int filter, int blur) {
         return switch (filter) {
             case 1 -> Detect.detectFace(frame);
-            case 2 -> Detect.blurFace(frame, 100);
+            case 2 -> Detect.blurFace(frame, blur);
             case 3 -> Filter.edge(frame);
             case 4 -> Filter.greyscale(frame);
             case 5 -> Filter.sepia(frame);
-            case 6 -> Filter.blur(frame, 100);
+            case 6 -> Filter.blur(frame, blur);
             case 7 -> Filter.noise(frame);
             default -> frame;
         };
