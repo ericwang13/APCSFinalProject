@@ -42,4 +42,8 @@ public class Util {
         File f = new File("res/haar/haarcascade_frontalface_alt.xml");
         return f.getAbsolutePath();
     }
+
+    public static Mat chooseFilter(Mat frame) {
+        return frame;
+    }
 }

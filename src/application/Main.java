@@ -1,22 +1,15 @@
 package application;
 
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
-
-import java.util.Objects;
 
 public class Main extends Application {
     private VideoCapture capture;
@@ -105,31 +98,31 @@ public class Main extends Application {
     public Image getGreyscale() {
         Mat mat = new Mat();
         capture.read(mat);
-        return Util.matToImg(Effect.greyscale(mat));
+        return Util.matToImg(Filter.greyscale(mat));
     }
 
     public Image getSepia() {
         Mat mat = new Mat();
         capture.read(mat);
-        return Util.matToImg(Effect.sepia(mat));
+        return Util.matToImg(Filter.sepia(mat));
     }
 
     public Image getBlur(int size) {
         Mat mat = new Mat();
         capture.read(mat);
-        return Util.matToImg(Effect.blur(mat, size));
+        return Util.matToImg(Filter.blur(mat, size));
     }
 
     public Image getEdge() {
         Mat mat = new Mat();
         capture.read(mat);
-        return Util.matToImg(Effect.edge(mat));
+        return Util.matToImg(Filter.edge(mat));
     }
 
     public Image getColormap() {
         Mat mat = new Mat();
         capture.read(mat);
-        return Util.matToImg(Effect.colormap(mat, Imgproc.COLORMAP_AUTUMN));
+        return Util.matToImg(Filter.colormap(mat, Imgproc.COLORMAP_AUTUMN));
     }
 
     public static void main(String[] args) {
