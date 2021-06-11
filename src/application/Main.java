@@ -8,10 +8,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import org.opencv.core.*;
+import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
 
 public class Main extends Application {
@@ -33,6 +33,7 @@ public class Main extends Application {
         pane.setBottom(submit);
 
         Scene scene = new Scene(pane, 1000, 800);
+        primaryStage.setTitle("OpenCV Java Image Processing");
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -59,6 +60,10 @@ public class Main extends Application {
                 return getSepia();
             case 5:
                 return getBlur(30);
+            case 6:
+                return getEdge();
+            case 7:
+                return getColormap();
             default: getCapture();
         }
         return getCapture();
@@ -87,19 +92,31 @@ public class Main extends Application {
     public Image getGreyscale() {
         Mat mat = new Mat();
         capture.read(mat);
-        return Util.matToImg(Filter.greyscale(mat));
+        return Util.matToImg(Effect.greyscale(mat));
     }
 
     public Image getSepia() {
         Mat mat = new Mat();
         capture.read(mat);
-        return Util.matToImg(Filter.sepia(mat));
+        return Util.matToImg(Effect.sepia(mat));
     }
 
     public Image getBlur(int size) {
         Mat mat = new Mat();
         capture.read(mat);
-        return Util.matToImg(Filter.blur(mat, size));
+        return Util.matToImg(Effect.blur(mat, size));
+    }
+
+    public Image getEdge() {
+        Mat mat = new Mat();
+        capture.read(mat);
+        return Util.matToImg(Effect.edge(mat));
+    }
+
+    public Image getColormap() {
+        Mat mat = new Mat();
+        capture.read(mat);
+        return Util.matToImg(Effect.colormap(mat, Imgproc.COLORMAP_AUTUMN));
     }
 
     public static void main(String[] args) {

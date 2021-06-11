@@ -10,7 +10,7 @@ public class Detect {
         MatOfRect facesDetected = new MatOfRect();
         CascadeClassifier cascadeClassifier = new CascadeClassifier();
         int minFaceSize = Math.round(frame.rows() * 0.1f);
-        cascadeClassifier.load("C:/Users/Eric Wang/IdeaProjects/ImageProcessing/res/haar/haarcascade_frontalface_alt.xml");
+        cascadeClassifier.load(Util.getClassifierPath());
         cascadeClassifier.detectMultiScale(frame,
                 facesDetected,
                 1.1,
@@ -30,7 +30,7 @@ public class Detect {
         MatOfRect facesDetected = new MatOfRect();
         CascadeClassifier cascadeClassifier = new CascadeClassifier();
         int minFaceSize = Math.round(frame.rows() * 0.1f);
-        cascadeClassifier.load("C:/Users/Eric Wang/IdeaProjects/ImageProcessing/res/haar/haarcascade_frontalface_alt.xml");
+        cascadeClassifier.load(Util.getClassifierPath());
         cascadeClassifier.detectMultiScale(frame,
                 facesDetected,
                 1.1,

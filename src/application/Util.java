@@ -7,6 +7,7 @@ import org.opencv.core.*;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
+import java.io.File;
 
 public class Util {
     public static Image matToImg(Mat frame) {
@@ -35,5 +36,10 @@ public class Util {
         System.arraycopy(sourcePixels, 0, targetPixels, 0, sourcePixels.length);
 
         return image;
+    }
+
+    public static String getClassifierPath() {
+        File f = new File("res/haar/haarcascade_frontalface_alt.xml");
+        return f.getAbsolutePath();
     }
 }
