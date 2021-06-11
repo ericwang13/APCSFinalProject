@@ -12,10 +12,9 @@
    </center>
    <bottom>
       <VBox prefHeight="32.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <TextField fx:id="field" promptText="Enter Effect Number (See README)" />
-            <Button fx:id="update" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#updateEffect" prefHeight="25.0" prefWidth="735.0" text="Update Effect" />
-         </children>
+         <TextField fx:id="field" promptText="Enter Effect Number (See README)"/>
+         <Button fx:id="update" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#updateEffect"
+                 prefHeight="25.0" prefWidth="735.0" text="Update Effect"/>
       </VBox>
    </bottom>
 </BorderPane>

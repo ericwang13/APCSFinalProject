@@ -27,25 +27,7 @@ public class Controller {
             @Override public void handle(long l) {
                 Mat frame = new Mat();
                 capture.read(frame);
-
-                switch (filter) {
-                    case 1:
-                        frame = Detect.detectFace(frame);
-                        break;
-                    case 2:
-                        frame = Detect.blurFace(frame, 100);
-                        break;
-                    case 3:
-                        frame = Filter.edge(frame);
-                        break;
-                    case 4:
-                        frame = Filter.greyscale(frame);
-                        break;
-                    default:
-                        break;
-                }
-
-                view.setImage(Util.matToImg(frame));
+                view.setImage(Util.matToImg(Util.chooseFilter(frame, filter)));
             }
         }.start();
     }

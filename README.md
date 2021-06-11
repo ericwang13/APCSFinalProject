@@ -29,3 +29,5 @@ Should be noted that I did not personally train any of the classifiers with mach
 9. Completed sepia and box blur filters, made some plans for more filters and some JavaFX designs.
 
 10. Worked on JavaFX frontend. Created a input field and submit button to change which filter/effect you want to use on the fly. Invalid numbers default to the capture stream without any effects. Pretty ugly, but functional.
+
+11. Improved JavaFX related stuff. Frontend difference is minimal, but on the backend code is much more organized. I reworked the JavaFX stuff to all be in the Controller class which is linked with the application.fxml file.
