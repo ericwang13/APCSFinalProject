@@ -1,3 +1,11 @@
+**VERY IMPORTANT**
+
+In order for the app to work at all, you need to add the OpenCV DLL to java.library.path
+
+There are many ways to do this, one of the easiest is just by taking the opencv_java452.dll file in APCSFinalProject/lib/opencv and copying it to the location of your JDK. For me, this is C:\Program Files\Java\jdk-16.0.1\bin
+
+Once you do this, the library can be loaded properly and everything should work well.
+
 # COMPILE/RUN Instructions
 
 First clone and CD into the repository
