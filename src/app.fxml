@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5d6580;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <center>
+      <ImageView fx:id="view" fitHeight="259.0" fitWidth="549.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <VBox prefHeight="44.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Slider fx:id="slider" min="10.0" visible="false">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></Slider>
+            <TextField fx:id="field" onAction="#updateEffect" promptText="Enter Effect Number (See README)">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></TextField>
+            <Button fx:id="update" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#updateEffect" prefHeight="25.0" prefWidth="636.0" style="-fx-background-color: #bfc5ce;" text="Update Effect">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="40.0" right="40.0" />
+         </padding>
+      </VBox>
+   </bottom>
+</BorderPane>
