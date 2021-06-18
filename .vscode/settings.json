@@ -1,0 +1,12 @@
+{
+  "java.project.referencedLibraries": {
+    "include": [
+      "lib/**/*.jar"
+    ],
+    "exclude": [
+      "lib/opencv/sources/platforms/android/gradle-wrapper/gradle/wrapper/gradle-wrapper.jar",
+      "lib/opencv/sources/samples/java/sbt/sbt/sbt-launch.jar",
+      "lib/opencv/sources/modules/java/test/pure_test/lib/junit-4.11.jar"
+    ]
+  }
+}
