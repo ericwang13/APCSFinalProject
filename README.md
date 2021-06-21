@@ -11,5 +11,5 @@ javac --module-path ./lib/openjfx/javafx-sdk-16/lib --add-modules javafx.control
 ## Run
 
 ```
-java --module-path "./lib/openjfx/javafx-sdk-16/lib" --add-modules javafx.controls,javafx.fxml --enable-preview -XX:+ShowCodeDetailsInExceptionMessages -classpath "./src;./lib/opencv/opencv-452.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.swing.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.fxml.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.controls.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.graphics.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.web.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.base.jar;./lib/openjfx/javafx-sdk-16/lib/javafx-swt.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.media.jar" App
+java --module-path "./lib/openjfx/javafx-sdk-16/lib" --add-modules javafx.controls,javafx.fxml --enable-preview -classpath "./src;./lib/opencv/opencv-452.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.swing.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.fxml.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.controls.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.graphics.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.web.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.base.jar;./lib/openjfx/javafx-sdk-16/lib/javafx-swt.jar;./lib/openjfx/javafx-sdk-16/lib/javafx.media.jar" App
 ```

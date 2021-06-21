@@ -41,15 +41,15 @@ public class Util {
   }
 
   public static Mat chooseFilter(Mat frame, int filter, int blur) {
-    return switch (filter) {
-      case 1 -> Detect.detectFace(frame);
-      case 2 -> Detect.blurFace(frame, blur);
-      case 3 -> Filter.edge(frame);
-      case 4 -> Filter.greyscale(frame);
-      case 5 -> Filter.sepia(frame);
-      case 6 -> Filter.blur(frame, blur);
-      case 7 -> Filter.noise(frame);
-      default -> frame;
-    };
+    switch (filter) {
+      case 1: return Detect.detectFace(frame);
+      case 2: return Detect.blurFace(frame, blur);
+      case 3: return Filter.edge(frame);
+      case 4: return Filter.greyscale(frame);
+      case 5: return Filter.sepia(frame);
+      case 6: return Filter.blur(frame, blur);
+      case 7: return Filter.noise(frame);
+      default: return frame;
+    }
   }
 }
